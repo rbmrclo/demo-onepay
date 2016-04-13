@@ -1,0 +1,57 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
+<style>
+  body {
+    padding-top: 40px;
+  }
+</style>
+
+<div class="container" >
+  <h2 class="text-center"> Onepay Summary </h2>
+  <br/>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th> Param </th>
+        <th> Value </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td> Amount </td>
+        <td> <%= "#{@amount}" %> </td>
+      </tr>
+      <tr>
+        <td> Currency </td>
+        <td> <%= "#{@currency}" %> </td>
+      </tr>
+      <tr>
+        <td> Command </td>
+        <td> <%= "#{@command}" %> </td>
+      </tr>
+      <tr>
+        <td> Merchant Ref </td>
+        <td> <%= "#{@merchant_ref}" %> </td>
+      </tr>
+      <tr>
+        <td> Transaction Number </td>
+        <td> <%= "#{@transaction_no}" %> </td>
+      </tr>
+      <tr>
+        <td> Order Info </td>
+        <td> <%= "#{@order_info}" %> </td>
+      </tr>
+      <tr>
+        <td> Locale </td>
+        <td> <%= "#{@locale}" %> </td>
+      </tr>
+      <tr>
+      <tr>
+        <td> Secure Hash </td>
+        <td> <%= "#{@secure_hash}" %> </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
