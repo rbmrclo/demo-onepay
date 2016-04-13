@@ -7,9 +7,9 @@ require 'sinatra'
 class App < Sinatra::Base
 
   get '/' do
-    @merchant        = "ROBBIE"
+    @merchant        = "ONEPAY"
     @merchant_ref    = "#{Time.now.to_i}"
-    @access_code     = ENV.fetch("ACCESS_CODE", "123456")
+    @access_code     = ENV.fetch("ACCESS_CODE", "D67342C2")
     @amount          = 10_000_000.to_s
     @currency        = "VND"
     @order_info      = "test order"
@@ -23,7 +23,7 @@ class App < Sinatra::Base
 
   post '/order' do
     GATEWAY_URL   = "https://mtf.onepay.vn/onecomm-pay/vpc.op" # sandbox url
-    SECURE_SECRET = [ ENV.fetch("SECURE_SECRET", "s3cr3tk3y") ]
+    SECURE_SECRET = [ ENV.fetch("SECURE_SECRET", "A3EFDFABA8653DF2342E8DAC29B51AF0") ]
 
     query = {
       'AgainLink'          => 'onepay.vn',
